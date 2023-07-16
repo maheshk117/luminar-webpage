@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminar Technolab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img
+                    src="data:image/jpeg;base64,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tHYfFd2LAB/c11KZv7vM0xB11DZsvlz15UinvY2/PLRCBKl4nakSZszaqwQgKzNmZc4VVUEscpvYA6X8K8SbZiDIpL3kAKjhSm9/2NCOoPLraqyLdnIkiJIpV5VkQSxl+GqoECKVkVrjLo17gaa8zPwuy2UYfNKXaANdiCS+ZcvMsSLX6ljpqSdaEU9evAp8q9zbcgUAlmILsgKxyP3kcxsvdU97MpFuttL1mO0orMc/syJE2hFnkyZFOnM8VP3qhxbGyxqmf2cS+Ivl+PM82Tn04mW/le3SsM+w2aVyJQInnixDpkObPCI8oV89ghMEZIKk+1rqLN1hx6w9pUfKpabchPE7zDhAly0cihQADqSoF7EG3Mg3r3PtiBJOG0gDAqp0YhS1siuwGVGOYWDEE5hbnWHF7G4iYpc9vdPXLfJ8Gsfj3vZv051Hxew3cyqJlWGds0qGO76qqOEfOAoYIOasRc2PLKhnXdw5qYarA7Uhuw4gukiRMOoeTKEU+udfrqwrW8VuwHk4okyucQkxsvtKhjYRPr3u9FmDc1LG2hYNslQ4MH0qDGSUpSqqEpSlESlKURKUpREpSlESlKURKrNtbFgxScOeNXHS+hU+KkaqfSrOlSCQZCAwZC5LtHstMLFoDxl6K5CsP4K3rp6VDG6+MvbgP9Q/je1dmpXo0/ilZoggHx9itbNtqNEEArm2xuz5yQ2JbIv6NCCx8i3JR6X9RW+4DARQoEiRUUdAPvPUnzOtTKVlr7VUrn5zbTLrnK41az6n1FKUpWdckpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlEX//2Q=="
+                    alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin: 30px;">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Placements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">About&nbsp;Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Home -->
+    <section id="courses">
+        <div class="container-course">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-md-5 courses-header" style=" padding-top: 5px;">
+                    <h1 class="courses-head">Best Data Science,Big Data Courses</h1> <br>
+                    <h3 class="courses-subhead">Luminar Technolab | Kochi,Kerala</h3> <br> <br>
+                    <p class="courses-headpara">Luminar Technolab, No.1 Software Training Institute offers
+                        various Software Courses along with 100% Guaranteed Placement assistance. We provide Big
+                        Data Training, Data Science, Python,Mean Stack,Software Testing &amp; many more</p>
+                    <div class="courses-btn sect">
+                        <a href="https://www.luminartechnolab.com/contact">
+                            <button class="courses-btn">Enquire now</button></a>
+                    </div>
+                </div>
+                <div class="col-sm-12  col-md-7 ">
+                    <img src="./images/home-logo.png" alt="homo img" class="home img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <!-- search -->
+    <section id="search">
+        <div class="container">
+        <div class="row d-flex">
+                <div class="col-sm-12">
+                    <div class="search-wrapper">
+                        <h1 class="searchhead">Our 100% Job Oriented Training Programs</h1>
+                        <p class="searchpara">We are focused on providing advanced level software
+                            training like Big Data Training, Hadoop Training, Data Science Training, Python
+                            Training, Machine Learning Training, Selenium Training in Cochin Kerala.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 courses-input-column">
+                    <span>
+                        <input type="text" class="search-course" placeholder="Search Your Course" value="">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABHNCSVQICAgIfAhkiAAAAmlJREFUSEu1lk122jAQxzVy9mUfSOgN6AliTtD0BEn2IcVwgLoHAPvF7OueoOQEoScoN6gbp+vCvvZ0xrHBgCXLeUXv+fGMpfnNl/4SCMUYdr3u3xTfA4pLmtLNH569EAIiEDi/j0cPqvWq/2H/A4FaSSI+CYFDA2MRCnBmsTM3mJtN2QEOT71eIvFbKZo1CjEHwCWmckmzWxLSHiLYNOdiC4EwiJ0bE+gGmMMeaVGLnjVBfCml70fOqsoQpzxJMNyCzaAZ8CWN+COPbG2lYPu/naWJx3dnE5ciphJQugA/3z+NXd26DHjXnvoI4iNH1gRWGL7tTEMydMXvlgVvKSuRsmny1Pw09VBlaNCeRlTjc6r511k8ulYCB2eToUDwOLogHnH9XjUGnQlB4AsvJjsH3V8YhUFnuuDC13lW50XeB394HtW0P3t22O7BgCIVAtAJnsZ+nWHd98J5XfNwhBSc3itTJ5oBBXxoohhVTpgCsxqa7KG6SE3KA6U99J26y64zqvqeKxWLh6C9/E4lHAT0Lkn5WT9rN63OmY3jKH4Fz6Ouam62XzapoKOHouw3jbIcXV23Z8BylE1ruaPDFJ11Aj2V4DNrowhlPaS/jY6bw+MMb4J4HOoytCNBu1ARAQhXSnjY9/gFxGKP13vGV9Qwfd1Jc6B55eOmZIy3TjG4IbZNQWmkurmUFVapN/RooZUim91nEnSLI6cyRQyS6FtShpyBPL3smBaqVPUCctv2bClTu3gnHVxZiVxUpc0EWgt85RZRRvrfgeygLtKjAHXQowEroXTfOSpwH8oXrKMDMyhdQ+mnxbe5f5OeZJrEOjrnAAAAAElFTkSuQmCC"
+                            class="img-fluid search-icon">
+                    </span>
+                </div>
+            </div>
+            <!-- programs -->
+            <div class="row training-program-row1">
+                <div class="col-sm-12 col-md-4 pb-4 training-program-column" id="training-program-column">
+                    <div class="card training-program-card">
+                        <div class="card-body courseList">
+                            <div class="training-program-card-circle rounded-circle">
+                                <img class="card-imag "
+                                    src="https://luminartechnolabbucket.s3.ap-south-1.amazonaws.com/fe964743-1e77-427b-aab2-274f850b0e70-asset-1.svg"
+                                    alt="machine-learning">
+                            </div>
+                            <h5 class="training-program-card-one-heading">Software Testing Specialist</h5>
+                            <p class="card-text training-program-card-1-text">Manual Testing , Java foundations,
+                                Mobile Testing, Automation Testing, Selenium IDE, Selenium Web driver, Selenium
+                                Advanced Web driver, Selenium Grid, TestNG, SQL workshop, Performance Testing,
+                                JMeter - Advanced, POSTMAN, API Testing, JIRA, Course Project</p>
+                            <p class="training-program-card-one-detials">
+                                <span class="training-program-card-title">Next Batch:</span>
+                                <span class="sub-date-courseList">Cochin : </span>
+                                Apr 10th 2023 (Offline &amp; Online)<br>
+                                <span class="sub-date-courseList">Calicut : </span>
+                                March 22nd 2023 (Offline Only) <br>
+                                <span class="training-program-card-title">Duration:</span>
+                                4 Months, 5 Days a Week, 1.5 - 2 Hours/day <br>
+                                <span class="training-program-card-title">Course Fee: <br></span>
+                                <span class="sub-date-courseList">Offline : </span>31500<br>
+                                <span class="sub-date-courseList">Online : </span>29500
+                            </p>
+
+                            <a href="https://www.luminartechnolab.com/course-detail/software-testing-training-kochi">
+                                <button class="training-program-card-button ">View More</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 pb-4 training-program-column" id="training-program-column">
+                    <div class="card training-program-card">
+                        <div class="card-body courseList">
+                            <div class="training-program-card-circle rounded-circle">
+                                <img class="card-imag "
+                                    src="https://luminartechnolabbucket.s3.ap-south-1.amazonaws.com/c678b72e-d125-46c0-8598-30c0f1989d2b-Group%201.svg"
+                                    alt="machine-learning">
+                            </div>
+                            <h5 class="training-program-card-one-heading">MEA(R)N Stack Web Development Expert -
+                                Angular &amp; React</h5>
+                            <p class="card-text training-program-card-one-text">HTML, CSS, Bootstrap, Javascript,
+                                Typescript, Git, Angular, React.js, Node.js, Express.js &amp; MongoDB</p>
+                            <p class="training-program-card-one-detials">
+                                <span class="training-program-card-title">Next Batch:</span>
+                                <span class="sub-date-courseList">Cochin : </span>
+                                Apr 10th 2023 (Offline &amp; Online) <br>
+                                <span class="sub-date-courseList">Calicut : </span>May 10th 2023 (Offline)
+                                <span class="training-program-card-title"><br> Duration:</span>
+                                5 Months, 5 Days a Week, 1.5-2 Hours/day
+                                <span class="training-program-card-title"><br> Course Fee: <br></span>
+                                <span class="sub-date-courseList">Offline : </span>41500<br>
+                                <span class="sub-date-courseList">Online : </span>39500
+                            </p>
+                            <a href="/course-detail/mean-stack-training-kochi">
+                                <button class="training-program-card-button ">View More</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 pb-4 training-program-column" id="training-program-column">
+                    <div class="card training-program-card">
+                        <div class="card-body courseList">
+                            <div class="training-program-card-circle rounded-circle"><img class="card-imag "
+                                    src="https://luminartechnolabbucket.s3.ap-south-1.amazonaws.com/b329bfb7-fbc1-4623-bfa2-1ee94814efe4-asset-2.svg"
+                                    alt="machine-learning"></div>
+                            <h5 class="training-program-card-one-heading">Data Science - ML - AI - Big Data with
+                                Cloud &amp; TABLEAU</h5>
+                            <p class="card-text training-program-card-one-text">Python, Hadoop, Spark, Data
+                                Analytics, Linear Algebra, Statistics, Probability Concepts, Machine Learning, Deep
+                                Learning, Data Science, Artificial Intelligence, TABLEAU, AWS Cloud.</p>
+                            <p class="training-program-card-one-detials"><span class="training-program-card-title">Next
+                                    Batch:</span><span class="sub-date-courseList">Cochin : </span>May 10th 2023
+                                (Offline &amp;
+                                Online)<br><span class="sub-date-courseList">Calicut : </span>Not Available<span
+                                    class="training-program-card-title"><br> Duration:</span>7 Months, 6 Days a Week,
+                                1.5-2 Hours/day <br> <span class="training-program-card-title">Course Fee: <br></span>
+                                <span class="sub-date-courseList">Offline : </span>61000<br><span
+                                    class="sub-date-courseList">Online : </span>56000
+                            </p><a href="/course-detail/data-science-training-kochi"><button
+                                    class="training-program-card-button ">View More</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 pb-4 training-program-column" id="training-program-column">
+                    <div class="card training-program-card">
+                        <div class="card-body courseList">
+                            <div class="training-program-card-circle rounded-circle"><img class="card-imag "
+                                    src="https://luminartechnolabbucket.s3.amazonaws.com/8f1944da-45af-4b90-a4c7-eb201a510432-python-svgrepo-com-2.svg"
+                                    alt="machine-learning"></div>
+                            <h5 class="training-program-card-one-heading">Python Django - Angular- Full Stack Web
+                                Development Expert</h5>
+                            <p class="card-text training-program-card-one-text">Core Python, Basics of Programming,
+                                Unix Commands, Advanced Python, Django Framework, REST API, Git, Angular, Web
+                                Concepts &amp; Tools.</p>
+                            <p class="training-program-card-one-detials"><span class="training-program-card-title">Next
+                                    Batch:</span><span class="sub-date-courseList">Cochin : </span>April 10th 2023
+                                (Offline &amp;
+                                Online) <br><span class="sub-date-courseList">Calicut : </span>Mar 15th 2023
+                                (Offline Only)<span class="training-program-card-title"><br> Duration:</span>6 Months, 5
+                                Days a Week, 1.5-2 Hours/day <br> <span class="training-program-card-title">Course Fee:
+                                    <br></span> <span class="sub-date-courseList">Offline : </span>35000<br><span
+                                    class="sub-date-courseList">Online : </span>29500</p><a
+                                href="/course-detail/python-training-kochi"><button
+                                    class="training-program-card-button ">View More</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 pb-4 training-program-column" id="training-program-column">
+                    <div class="card training-program-card">
+                        <div class="card-body courseList">
+                            <div class="training-program-card-circle rounded-circle"><img class="card-imag "
+                                    src="https://luminartechnolabbucket.s3.ap-south-1.amazonaws.com/fba6e2b7-cbef-4864-9aa2-8d42b615a363-1797049.png"
+                                    alt="machine-learning"></div>
+                            <h5 class="training-program-card-one-heading">Asp.net MVC with Angular - Full Stack</h5>
+                            <p class="card-text training-program-card-one-text">C# Programming, Object Oriented
+                                Development, ASP .Net Web and Windows Application Development, MS SQL, MVC
+                                Architecture, Entity Framework, Dot Net Core, WEB API, Angular, GUI Development.</p>
+                            <p class="training-program-card-one-detials"><span class="training-program-card-title">Next
+                                    Batch:</span><span class="sub-date-courseList">Cochin : </span>Apr 10th 2023 (10:30
+                                AM- 12:30
+                                PM)<br><span class="sub-date-courseList">Calicut : </span>Apr 10th 2023 <span
+                                    class="training-program-card-title"><br>Duration:</span>4 Months, 5 Days a Week, 2
+                                Hours/day <br> <span class="training-program-card-title">Course Fee: <br></span> <span
+                                    class="sub-date-courseList">Offline : </span>29500<br><span
+                                    class="sub-date-courseList">Online : </span>25000</p><a
+                                href="/course-detail/asp.net-training-kochi"><button
+                                    class="training-program-card-button ">View More</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 pb-4 training-program-column " id="training-program-column">
+                    <div class="card training-program-card">
+                        <div class="card-body courseList">
+                            <div class="training-program-card-circle rounded-circle"><img class="card-imag "
+                                    src="https://luminartechnolabbucket.s3.ap-south-1.amazonaws.com/9e12911e-0b95-4ba2-a6b8-4c5b75b99c42-android-logo-svgrepo-com.svg"
+                                    alt="machine-learning"></div>
+                            <h5 class="training-program-card-one-heading">Android Developer Expert Training In
+                                Kochi- Flutter</h5>
+                            <p class="card-text training-program-card-one-text">Dart, Flutter Introduction to
+                                Android, Android Studio, AndroidManifest.xml, Directories, Layout Designing, Basics
+                                &amp; Intents, UI Designing, Composite &amp; Custom Views, Time, Date &amp; Dialog
+                                Boxes, Media &amp; Menu, Google Map, Fragment &amp; Material Designs, Notifications,
+                                Telephony &amp; Connectivity, Internal Storage &amp; External Storage, Async Task,
+                                Parsing &amp; Shared Preferences, Admob, SQLite Database, Firebase, API Testing
+                                Using Postman, Web Services, Design Patterns, Course Project.</p>
+                            <p class="training-program-card-one-detials"><span class="training-program-card-title">Next
+                                    Batch:</span><span class="sub-date-courseList">Cochin : </span>Mar 15th 2023
+                                (Offline &amp;
+                                Online)<br><span class="sub-date-courseList">Calicut : </span>Mar 1st 2023
+                                (Offline)<span class="training-program-card-title"><br>Duration:</span> 4 months.( 1.5-2
+                                Hours/day) <br><span class="training-program-card-title">Course Fee: <br></span> <span
+                                    class="sub-date-courseList">Offline : </span>29500<br><span
+                                    class="sub-date-courseList">Online : </span>25000</p><a
+                                href="/course-detail/android-training-kochi"><button
+                                    class="training-program-card-button ">View More</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 pb-4 training-program-column" id="training-program-column">
+                    <div class="card training-program-card">
+                        <div class="card-body courseList">
+                            <div class="training-program-card-circle rounded-circle"><img class="card-imag "
+                                    src="https://luminartechnolabbucket.s3.ap-south-1.amazonaws.com/1d3d6d50-bb3c-4197-8fe2-0629efff00a7-Group%202.svg"
+                                    alt="machine-learning"></div>
+                            <h5 class="training-program-card-one-heading">DATA SCIENCE - ML - AI - &amp; TABLEAU
+                            </h5>
+                            <p class="card-text training-program-card-one-text">Python, Exploratory Data Analytics,
+                                Linear Algebra, Statistics, Probability Concepts, Machine Learning, Deep Learning,
+                                Data Science, Artificial Intelligence, TABLEAU, Capstone Project</p>
+                            <p class="training-program-card-one-detials"><span class="training-program-card-title">Next
+                                    Batch:</span><span class="sub-date-courseList">Cochin : </span>May 10th 2023
+                                (Offline &amp;
+                                Online)<br><span class="sub-date-courseList">Calicut : </span>Mar 22nd 2023 (Offline
+                                Only)<span class="training-program-card-title"><br>Duration:</span>4 Months, 6 Days a
+                                Week, 1.5-2 Hours/day <br><span class="training-program-card-title">Course Fee:
+                                    <br></span> <span class="sub-date-courseList">Offline : </span>45000<br><span
+                                    class="sub-date-courseList">Online : </span>39500</p><a
+                                href="/course-detail/machine-learning-training-kochi"><button
+                                    class="training-program-card-button ">View More</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 pb-4 training-program-column" id="training-program-column">
+                    <div class="card training-program-card">
+                        <div class="card-body courseList">
+                            <div class="training-program-card-circle rounded-circle"><img class="card-imag "
+                                    src="https://luminartechnolabbucket.s3.ap-south-1.amazonaws.com/c169e6cf-acc0-4d63-ab88-a16afbbef9d3-asset-3.svg"
+                                    alt="machine-learning"></div>
+                            <h5 class="training-program-card-one-heading">Business Analytics - Power BI &amp;
+                                Tableau</h5>
+                            <p class="card-text training-program-card-one-text">Introduction to Business
+                                Intelligence, SQL, Data Warehousing, Power BI, Tableau</p>
+                            <p class="training-program-card-one-detials"><span class="training-program-card-title">Next
+                                    Batch:</span><span class="sub-date-courseList">Cochin : </span>Any time (One to One
+                                Classes)<br><span class="sub-date-courseList">Calicut : </span>Not Available<span
+                                    class="training-program-card-title"><br>Duration:</span>2.5 Months (2-3 Hours
+                                /day) <br><span class="training-program-card-title">Course Fee: <br></span> <span
+                                    class="sub-date-courseList">Offline : </span>55000<br><span
+                                    class="sub-date-courseList">Online : </span>55000</p><a
+                                href="/course-detail/data-analytics-training-kochi"><button
+                                    class="training-program-card-button ">View More</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 pb-4 training-program-column" id="training-program-column">
+                    <div class="card training-program-card">
+                        <div class="card-body courseList">
+                            <div class="training-program-card-circle rounded-circle"><img class="card-imag "
+                                    src="https://luminartechnolabbucket.s3.amazonaws.com/9aca2ca6-2169-4989-950e-5faec69246a9-Java_programming_language_logo.svg.png"
+                                    alt="machine-learning"></div>
+                            <h5 class="training-program-card-one-heading">Java Spring Full Stack Development</h5>
+                            <p class="card-text training-program-card-one-text">Important Spring Annotations, IOC
+                                Containers,Dependency injection,Auto Wiring, Spring Data JPA, Intrduction to Spring
+                                Security,Introduction to Spring AOP , Introduction to Microservices, REST Api
+                                Webservices, Postman, REST client, Spring Boot Annotations, Configure a Spring Boot
+                                Web Application, Sample application development using spring boot with
+                                Jsp/Thymeleaf. </p>
+                            <p class="training-program-card-one-detials"><span class="training-program-card-title">Next
+                                    Batch:</span><span class="sub-date-courseList">Cochin : </span>May 10th 2023
+                                <br><span class="sub-date-courseList">Calicut : </span>Not Available<span
+                                    class="training-program-card-title"><br>Duration:</span>4 Months, 5 Days a Week,
+                                1.5-2 Hours/day <br><span class="training-program-card-title">Course Fee: <br></span>
+                                <span class="sub-date-courseList">Offline : </span>31500<br><span
+                                    class="sub-date-courseList">Online : </span>29500
+                            </p>
+                            <a href="/course-detail/Java-spring-training-kochi">
+                                <button class="training-program-card-button ">View More
+                                </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- why luminar -->
+    <section id="courses-why-luminar">
+        <div class="container-fluid">
+            <div class="row courses-why-luminar">
+                <div class="col-12 col-md-6 courses-why-luminar-image-section"><img src="./images/why-icon.png"
+                        class="why-luminar-image-left img-fluid" alt="why-luminar-image"></div>
+                <div class="col-12 col-md-6 why-luminar-text-section">
+                    <h1 class="why-luminar-heading">Why Luminar Technolab</h1>
+                    <p class="why-luminar-paragraph">At Luminar Technolab we offer a comprehensive course that
+                        covers the whole aspects of the Data Science Ecosystem including Big Data Engineering, Data
+                        Science, Data Analytics, Data Visualization - Tableau, data processing, Data Munging,
+                        Machine Learning, Deep Learning &amp; Artificial Intelligence.</p>
+                    <ul class="why-luminar-list">
+                        <li> ISO 9001:2015 Certified Institution</li>
+                        <li> Affiliated to NACTET (http://www.nactetindia.org/affiliation.php)</li>
+                        <li> Training by highly experienced and certified professionals</li>
+                        <li> No slideshow (PPT) training, fully Hands-on training</li>
+                        <li> Interactive session with interview QA’s</li>
+                        <li> Real-time projects scenarios &amp; Certification Help</li>
+                        <li> Most competitive &amp; affordable course fees</li>
+                        <li> Placement support for all courses</li>
+                        <li> List of established &amp; satisfied clients &amp; students</li>
+                        <li> Located Near Infopark Cochin.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- join-->
+    <section id="join-now-section">
+        <div class="join-now-background">
+            <div class="container d-flex justify-content-center">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12 overflow-text">
+                        <div class="text-center">
+                            <p class="join-now-heading">So why wait? Start one of our high quality courses from
+                                the world's leading experts today!</p>
+                            <p class="join-now-callus">If You Have Any Questions Call Us / Whatsapp On +91 808
+                                665 1651</p><button class="join-now-button">JOIN NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="mx-0 px-0">
+        <div class="footer-container bg-white">
+            <div class="row mx-0">
+                <div class="col-sm-2 p-0 mt-3">
+                    <img src="data:image/jpeg;base64,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tHYfFd2LAB/c11KZv7vM0xB11DZsvlz15UinvY2/PLRCBKl4nakSZszaqwQgKzNmZc4VVUEscpvYA6X8K8SbZiDIpL3kAKjhSm9/2NCOoPLraqyLdnIkiJIpV5VkQSxl+GqoECKVkVrjLo17gaa8zPwuy2UYfNKXaANdiCS+ZcvMsSLX6ljpqSdaEU9evAp8q9zbcgUAlmILsgKxyP3kcxsvdU97MpFuttL1mO0orMc/syJE2hFnkyZFOnM8VP3qhxbGyxqmf2cS+Ivl+PM82Tn04mW/le3SsM+w2aVyJQInnixDpkObPCI8oV89ghMEZIKk+1rqLN1hx6w9pUfKpabchPE7zDhAly0cihQADqSoF7EG3Mg3r3PtiBJOG0gDAqp0YhS1siuwGVGOYWDEE5hbnWHF7G4iYpc9vdPXLfJ8Gsfj3vZv051Hxew3cyqJlWGds0qGO76qqOEfOAoYIOasRc2PLKhnXdw5qYarA7Uhuw4gukiRMOoeTKEU+udfrqwrW8VuwHk4okyucQkxsvtKhjYRPr3u9FmDc1LG2hYNslQ4MH0qDGSUpSqqEpSlESlKURKUpREpSlESlKURKrNtbFgxScOeNXHS+hU+KkaqfSrOlSCQZCAwZC5LtHstMLFoDxl6K5CsP4K3rp6VDG6+MvbgP9Q/je1dmpXo0/ilZoggHx9itbNtqNEEArm2xuz5yQ2JbIv6NCCx8i3JR6X9RW+4DARQoEiRUUdAPvPUnzOtTKVlr7VUrn5zbTLrnK41az6n1FKUpWdckpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlEX//2Q==" class="img-fluid footer-brand-image" alt="footer-logo">
+                    <div class="col-sm-12 d-flex justify-content-start   pt-3 social-media-icons-wrapper">
+                        <a href="https://www.instagram.com/luminartechnolab/">
+                            <i class="fa-brands fa-instagram fa-2xl"></i> </a>
+
+
+                        <a href="https://www.facebook.com/luminartechnolab" class="ps-2">
+                            <i class="fa-brands fa-facebook fa-2xl"></i></a>
+
+
+                        <a href="https://www.youtube.com/c/LuminarTechnolab" class="ps-2">
+                            <i class="fa-brands fa-youtube fa-2xl"></i> </a>
+
+
+                        <a href="https://twitter.com/luminartechno/" class="ps-2">
+                            <i class="fa-brands fa-twitter fa-2xl"></i></a>
+
+
+                        <a href="https://www.linkedin.com/company/luminartechnolab/?originalSubdomain=in" class="ps-2">
+                            <i class="fa-brands fa-linkedin fa-2xl"></i></a>
+
+
+                    </div>
+                    <div class="row footer-certificate-logo pt-3">
+                        <div class="col-5 p-0 footer-certificate-logo-small-device-left">
+                            <img src="./images/iso.png" alt="certificate logo"
+                                class=" footer-certificate-logo-image-one">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="col-sm-3">
+                    <p class="course pt-2 px-0">COURSES</p>
+                    <hr class="footer-hr">
+                    <div class="row footer-courses">
+                        <div class="col-sm-12"><a href="/course-detail/software-testing-training-kochi">Software
+                                Testing Specialist</a></div>
+                        <div class="col-sm-12"><a href="/course-detail/mean-stack-training-kochi">MEA(R)N Stack
+                                Web Development Expert - Angular &amp; React</a></div>
+                        <div class="col-sm-12"><a href="/course-detail/data-analytics-training-kochi">Business
+                                Analytics - Power BI &amp; Tableau</a></div>
+                        <div class="col-sm-12"><a href="/course-detail/android-training-kochi">Android Developer
+                                Expert Training In Kochi- Flutter</a></div>
+                        <div class="col-sm-12"><a href="/course-detail/data-science-training-kochi">Data Science
+                                - ML - AI - Big Data with Cloud &amp; TABLEAU</a></div>
+                        <div class="col-sm-12"><a href="/course-detail/python-training-kochi">Python Django -
+                                Angular- Full Stack Web Development Expert</a></div>
+                        <div class="col-sm-12"><a href="/course-detail/machine-learning-training-kochi">DATA
+                                SCIENCE - ML - AI - &amp; TABLEAU</a></div>
+                        <div class="col-sm-12"><a href="/course-detail/asp.net-training-kochi">Asp.net MVC with
+                                Angular - Full Stack</a></div>
+                        <div class="col-sm-12"><a href="/course-detail/Java-spring-training-kochi">Java Spring
+                                Full Stack Development</a></div>
+                    </div>
+                    <div class="accordion large-screen" id="accordion-footer">
+                        <div class="card">
+                            <div class="accordion-footer card-header p-0" id="accordion-footer-heading-one">
+                                <h2 class="mb-0"><button class="btn-block accordion-footer-heading" type="button"
+                                        data-toggle="collapse" data-target="#footer-accordion" aria-expanded="true"
+                                        aria-controls="footer-accordion">COURSES <i
+                                            class="fas fa-angle-down"></i></button></h2>
+                            </div>
+                            <div id="footer-accordion" class="collapse show"
+                                aria-labelledby="accordion-footer-heading-one" data-parent="#accordion-footer">
+                                <div class="card-body footer-accordion px-0">
+                                    <div class="col-12"><a href="/course-detail/61a469e2671cbd1acc07738d">Software
+                                            Testing
+                                            Specialist</a></div>
+                                    <div class="col-12"><a href="/course-detail/61a46a40671cbd1acc07738f">MEA(R)N Stack
+                                            Web
+                                            Development Expert - Angular &amp; React</a></div>
+                                    <div class="col-12"><a href="/course-detail/61a46ac1671cbd1acc077391">Business
+                                            Analytics -
+                                            Power BI &amp; Tableau</a></div>
+                                    <div class="col-12"><a href="/course-detail/61a46b15671cbd1acc077393">Android
+                                            Developer
+                                            Expert Training In Kochi- Flutter</a></div>
+                                    <div class="col-12"><a href="/course-detail/61b6359a9f8559928c1213cd">Data
+                                            Science - ML - AI - Big Data with Cloud &amp; TABLEAU</a></div>
+                                    <div class="col-12"><a href="/course-detail/61effe38e886454744ba7816">Python
+                                            Django - Angular- Full Stack Web Development Expert</a></div>
+                                    <div class="col-12"><a href="/course-detail/6230d1ec76bfa124cb3aa512">DATA
+                                            SCIENCE - ML - AI - &amp; TABLEAU</a></div>
+                                    <div class="col-12"><a href="/course-detail/6231979b56fd5527fef291c4">Asp.net MVC
+                                            with
+                                            Angular - Full Stack</a></div>
+                                    <div class="col-12"><a href="/course-detail/62eb9b94c3ed957f49793c78">Java
+                                            Spring Full Stack Development</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="accordion-footer card-header p-0" id="accordion-footer-heading-one">
+                                <h2 class="mb-0"><button class="btn-block accordion-footer-heading" type="button"
+                                        data-toggle="collapse" data-target="#footer-accordions" aria-expanded="true"
+                                        aria-controls="footer-accordions">USEFULL LINKS <i
+                                            class="fas fa-angle-down"></i></button></h2>
+                            </div>
+                            <div id="footer-accordions" class="collapse show"
+                                aria-labelledby="accordion-footer-heading-one" data-parent="#accordion-footer">
+                                <div class="card-body footer-accordion px-0">
+                                    <div class="col-sm-12 footer-courses-our-facility"><a class="footer-link"
+                                            href="/about">Teachers &amp; Staff</a><a class="footer-link"
+                                            href="/gallery">Gallery</a></div>
+                                    <div class="col-sm-12 footer-courses-our-facility"><a class="footer-link"
+                                            href="/courses">Our Courses</a><a class="footer-link-01"
+                                            href="/Refund">Refund &amp; Cancellation Policy</a></div>
+                                    <div class="col-sm-12 footer-courses-our-facility"><a class="footer-link-01"
+                                            href="/certification">Certification &amp; Affiliation</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="accordion-footer card-header p-0" id="accordion-footer-heading-one">
+                                <h2 class="mb-0"><button class="btn-block accordion-footer-heading" type="button"
+                                        data-toggle="collapse" data-target="#footer-accordions1" aria-expanded="true"
+                                        aria-controls="footer-accordions1">CONTACT US <i
+                                            class="fas fa-angle-down"></i></button></h2>
+                            </div>
+                            <div id="footer-accordions1" class="collapse show"
+                                aria-labelledby="accordion-footer-heading-one" data-parent="#accordion-footer">
+                                <div class="card-body footer-accordion px-0">
+                                    <p class="course1 pt-2 px-0">Cochin</p>
+                                    <p class="text-left footer-address">Luminar Technolab Pvt Ltd <br>3rd Floor,
+                                        Vallamattam Estate, Seaport - Airport Rd, CSEZ, Kakkanad, Cochin, Kerala
+                                        - 682037<a href="tel:+91 808 665 1651">
+                                            <p class="text-left footer-paragraph">Call: +91 8086 651 651</p>
+                                        </a><a href="mailto:contact@luminartechnolab.com">
+                                            <p class="text-left footer-paragraph">Email:
+                                                contact@luminartechnolab.com</p>
+                                        </a></p>
+                                    <p class="course1 pt-2 px-0">Calicut</p>
+                                    <p class="text-left footer-address">Luminar Technolab Pvt Ltd <br>2nd Floor,
+                                        61/10222, <br>Mullath Building, <br>Opp. KSRTC Bus Stand ,<br><span
+                                            style="white-space: nowrap;">Mavoor Road, Calicut,
+                                            Kerala-673001</span><a href="tel:+91 8086 531 531">
+                                            <p class="text-left footer-paragraph">Call:+91 8086 531 531, 0495 -
+                                                3573001</p>
+                                        </a><a href="mailto:contact@luminartechnolab.com">
+                                            <p class="text-left footer-paragraph">Email:
+                                                contact@luminartechnolab.com</p>
+                                        </a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 footer-web-useful-links">
+                    <p class="course pt-2 px-0">USEFUL LINKS</p>
+                    <hr class="footer-hr">
+                    <div class="row footer-courses about-our-services text-left">
+                        <div class="col-sm-12 footer-courses-our-facility"><a class="footer-link"
+                                href="https://www.luminartechnolab.com/about">Teachers &amp; Staff</a><a
+                                class="footer-link" href="https://www.luminartechnolab.com/gallery">Gallery</a></div>
+                        <div class="col-sm-12 footer-courses-our-facility"><a class="footer-link"
+                                href="https://www.luminartechnolab.com/courses">Our Courses</a><a class="footer-link-01"
+                                href="https://www.luminartechnolab.com/Refund">Refund
+                                &amp; Cancellation Policy</a></div>
+                        <div class="col-sm-12 footer-courses-our-facility"><a class="footer-link-01"
+                                href="https://www.luminartechnolab.com/certification">Certification &amp;
+                                Affiliation</a></div>
+                    </div>
+                </div>
+                <div class="col-sm-3 p-0 footer-web-contact-address ">
+                    <p class="course pt-2 px-0">CONTACT US</p>
+                    <hr class="footer-hr">
+                    <p class="course pt-2 px-0">Cochin</p>
+                    <p class="text-left footer-address">Luminar Technolab Pvt Ltd <br>3rd Floor, Vallamattam
+                        Estate, <br>Seaport - Airport Rd, CSEZ,<br>Kakkanad, Cochin, Kerala - 682037<a
+                            href="tel:+91 808 665 1651">
+                            <p class="text-left footer-paragraph">Call:+91 8086 651 651</p>
+                        </a><a href="mailto:contact@luminartechnolab.com">
+                            <p class="text-left footer-paragraph">Email: contact@luminartechnolab.com</p>
+                        </a></p>
+                    <p class="course pt-2 px-0">Calicut</p>
+                    <p class="text-left footer-address">Luminar Technolab Pvt Ltd <br>2nd Floor, 61/10222
+                        ,<br>Mullath Building, <br>Opp. KSRTC Bus Stand, <br><span style="white-space: nowrap;">
+                            Mavoor Road, Calicut, Kerala-673001</span><a href="tel:+91 808 653 1531">
+                            <p class="text-left footer-paragraph">Call: +91 8086 531 531, 0495 - 3573001</p>
+                        </a><a href="mailto:contact@luminartechnolab.com">
+                            <p class="text-left footer-paragraph">Email: contact@luminartechnolab.com</p>
+                        </a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wrapper px-0">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="footer-copyrights"> © Luminar Technolab 2023 | Developed by <a
+                                href="https://www.deepnetsoft.com/" target="_blank">Deepnetsoft</a><a
+                                class="terms-and-use" href="/privacyPolicy"> Privacy</a> &amp;<a class="terms-and-use"
+                                href="/termsAndConditions"> Terms of Use </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    </div><button class="scroll-btn" style="display: none;"> <i
+            class="people-say fas fa-chevron-circle-up"></i></button>
+    </div>
+</body>
+
+</html>l
